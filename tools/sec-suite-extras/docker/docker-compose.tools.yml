@@ -1,0 +1,68 @@
+version: '3.7'
+
+services:
+  spiderfoot:
+    image: spiderfoot/spiderfoot:latest
+    container_name: spiderfoot
+    ports:
+      - '5001:5001'
+    volumes:
+      - ./outdir/spiderfoot:/data
+    restart: unless-stopped
+
+  gophish:
+    image: gophish/gophish:latest
+    container_name: gophish
+    ports:
+      - '3333:3333'
+      - '8080:8080'
+    volumes:
+      - ./outdir/gophish:/data
+    restart: unless-stopped
+
+  xsstrike:
+    build: ./xsstrike
+    container_name: xsstrike
+    volumes:
+      - ./outdir/xsstrike:/out
+    entrypoint: ["/bin/sh","-c","sleep infinity"]
+
+  pocsuite3:
+    build: ./pocsuite3
+    container_name: pocsuite3
+    volumes:
+      - ./outdir/pocsuite3:/out
+    entrypoint: ["/bin/sh","-c","sleep infinity"]
+
+  sublist3r:
+    build: ./sublist3r
+    container_name: sublist3r
+    volumes:
+      - ./outdir/sublist3r:/out
+    entrypoint: ["/bin/sh","-c","sleep infinity"]
+
+  wapiti:
+    build: ./wapiti
+    container_name: wapiti
+    volumes:
+      - ./outdir/wapiti:/out
+    entrypoint: ["/bin/sh","-c","sleep infinity"]
+
+  # Keep the vulnerable apps in the same compose for lab testing
+  juice-shop:
+    image: bkimminich/juice-shop:latest
+    container_name: juice-shop
+    ports:
+      - '3000:3000'
+    restart: unless-stopped
+
+  dvwa:
+    image: vulnerables/web-dvwa:latest
+    container_name: dvwa
+    ports:
+      - '80:80'
+    restart: unless-stopped
+
+networks:
+  default:
+    external: false
