@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Mira Web — Jafar Kyari</title>
+  <meta name="description" content="Mira Web — portfolio by Jafar Kyari. About, Projects, Contact. Animated and responsive." />
+  <link href="styles.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body class="theme-dark">
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <a href="#hero" class="logo"><span class="logo-mark">M</span>Mira Web</a>
+        <span class="tag">Created &amp; published by Jafar Kyari</span>
+      </div>
+      <nav class="nav" id="nav" aria-label="Primary navigation">
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <button id="nav-toggle" class="nav-toggle" aria-label="Toggle navigation">☰</button>
+    </div>
+  </header>
+
+  <main>
+    <section id="hero" class="hero">
+      <div class="container hero-inner">
+        <div class="hero-left">
+          <h1 class="reveal-up">Welcome to <span class="accent">Mira Web</span></h1>
+          <p class="lead reveal-up delay-1">I’m Jafar Kyari — Backend Engineer. I build resilient APIs, developer tooling, and production-ready systems.</p>
+          <div class="hero-cta reveal-up delay-2">
+            <a href="#projects" class="btn">See Projects</a>
+            <a href="#contact" class="btn btn-outline">Contact</a>
+          </div>
+          <ul class="hero-stats reveal-up delay-3" aria-hidden="true">
+            <li><strong id="stat-projects">3+</strong> projects</li>
+            <li><strong>PHP</strong> &amp; APIs</li>
+            <li><strong>Docker</strong> &amp; CI</li>
+          </ul>
+        </div>
+
+        <div class="hero-right">
+          <div class="device-mockup floating" aria-hidden="true">
+            <div class="screen">
+              <div class="mock-content">
+                <h4>Mira Tasks API</h4>
+                <p>JWT auth • Docker • PHPUnit</p>
+                <div class="pill">Demo-ready</div>
+              </div>
+            </div>
+            <div class="glow"></div>
+          </div>
+        </div>
+      </div>
+      <svg class="wave" viewBox="0 0 1440 80" preserveAspectRatio="none"><path fill="rgba(255,255,255,0.03)" d="M0,32 C360,120 1080,-40 1440,32 L1440,80 L0,80 Z"></path></svg>
+    </section>
+
+    <section id="about" class="section about">
+      <div class="container">
+        <h2 class="reveal-up">About</h2>
+        <p id="about-bio" class="muted reveal-up delay-1">
+          I build reliable backends, APIs, and developer tooling that help teams move faster. I focus on pragmatic architecture, testability, and automation.
+        </p>
+        <div class="grid reveal-up delay-2">
+          <div class="card small">
+            <h3>Role</h3>
+            <p>Backend Engineer / Platform</p>
+          </div>
+          <div class="card small">
+            <h3>Experience</h3>
+            <p>APIs, PHP, Docker, CI/CD</p>
+          </div>
+          <div class="card small">
+            <h3>Availability</h3>
+            <p>Open to freelance &amp; full-time</p>
+          </div>
+        </div>
+
+        <h3 class="reveal-up delay-3">Top skills</h3>
+        <ul class="skills reveal-up delay-4" id="skills-list">
+          <li>PHP • Backend APIs</li>
+          <li>Docker • CI/CD</li>
+          <li>MySQL • Eloquent</li>
+          <li>Testing • PHPUnit</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="projects" class="section projects">
+      <div class="container">
+        <h2 class="reveal-up">Projects</h2>
+        <p class="muted reveal-up delay-1">Selected work you can run locally or inspect on GitHub.</p>
+
+        <div class="projects-grid" id="projects-grid">
+          <article class="card project-card reveal-up delay-2">
+            <h3>Mira Tasks API</h3>
+            <p>Interview-ready REST API demonstrating JWT auth, Eloquent ORM, Docker, and PHPUnit tests — a complete backend starter.</p>
+            <div class="card-actions">
+              <a href="https://github.com/kyarijafar92-hash/php-tasks-api" target="_blank" rel="noopener">Repo</a>
+              <a href="#" target="_blank" rel="noopener">Demo</a>
+            </div>
+          </article>
+
+          <article class="card project-card reveal-up delay-3">
+            <h3>Mira Web (this site)</h3>
+            <p>Animated, responsive portfolio built with vanilla HTML/CSS/JS — lightweight and easy to host on GitHub Pages.</p>
+            <div class="card-actions">
+              <a href="#" target="_blank" rel="noopener">Repo</a>
+            </div>
+          </article>
+
+          <article class="card project-card reveal-up delay-4">
+            <h3>Open-source contribution</h3>
+            <p>Library or tool you contributed to — add the link and one-line description here to show collaboration impact.</p>
+            <div class="card-actions">
+              <a href="#" target="_blank" rel="noopener">Repo</a>
+            </div>
+          </article>
+        </div>
+
+        <div class="centered reveal-up delay-5">
+          <a id="more-projects" href="https://github.com/kyarijafar92-hash" class="btn btn-outline" target="_blank">See more on GitHub</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section contact">
+      <div class="container">
+        <h2 class="reveal-up">Contact</h2>
+        <p class="muted reveal-up delay-1">Want to collaborate? Send a message or email me.</p>
+
+        <form id="contact-form" class="contact-form reveal-up delay-2" method="POST" action="https://formspree.io/f/YOUR_FORM_ID">
+          <label>
+            <span>Your name</span>
+            <input type="text" name="name" required placeholder="Your name" />
+          </label>
+          <label>
+            <span>Email</span>
+            <input type="email" name="email" required placeholder="you@example.com" />
+          </label>
+          <label>
+            <span>Message</span>
+            <textarea name="message" rows="6" required placeholder="Short message..."></textarea>
+          </label>
+          <div class="form-actions">
+            <button id="submit-btn" type="submit" class="btn">
+              <span class="btn-text">Send message</span>
+              <svg class="btn-check" viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="#021018" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" d="M4 12l5 5L20 7"/></svg>
+            </button>
+            <small class="muted">Or email: <a href="mailto:hi@jafarkyari.dev" id="contact-email">hi@jafarkyari.dev</a></small>
+          </div>
+          <p id="form-status" class="form-status" aria-live="polite"></p>
+        </form>
+      </div>
+      <!-- Confetti canvas & success overlay -->
+      <canvas id="confetti-canvas" class="confetti-canvas" aria-hidden="true"></canvas>
+      <div id="success-overlay" class="success-overlay" aria-hidden="true">
+        <div class="success-card">
+          <h3>Message sent</h3>
+          <p>Thanks — I’ll get back to you shortly.</p>
+          <button id="success-close" class="btn btn-outline">Close</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>© <span id="footer-year"></span> Mira Web — Created &amp; published by Jafar Kyari</div>
+      <div class="social">
+        <a id="github-link" href="https://github.com/kyarijafar92-hash" target="_blank" rel="noopener">GitHub</a>
+        <a id="linkedin-link" href="https://linkedin.com/in/YOUR_PROFILE" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
