@@ -1,0 +1,71 @@
+version: '3.7'
+
+services:
+  mitmproxy:
+    build: ./mitmproxy
+    container_name: mitmproxy
+    ports:
+      - '8080:8080'
+    volumes:
+      - ./outdir/mitmproxy:/out
+    entrypoint: ["/bin/sh","-c","sleep infinity"]
+
+  impacket:
+    build: ./impacket
+    container_name: impacket
+    volumes:
+      - ./outdir/impacket:/out
+    entrypoint: ["/bin/sh","-c","sleep infinity"]
+
+  responder:
+    build: ./responder
+    container_name: responder
+    volumes:
+      - ./outdir/responder:/out
+    entrypoint: ["/bin/sh","-c","sleep infinity"]
+
+  twint:
+    build: ./twint
+    container_name: twint
+    volumes:
+      - ./outdir/twint:/out
+    entrypoint: ["/bin/sh","-c","sleep infinity"]
+
+  sherlock:
+    build: ./sherlock
+    container_name: sherlock
+    volumes:
+      - ./outdir/sherlock:/out
+    entrypoint: ["/bin/sh","-c","sleep infinity"]
+
+  knockpy:
+    build: ./knockpy
+    container_name: knockpy
+    volumes:
+      - ./outdir/knockpy:/out
+    entrypoint: ["/bin/sh","-c","sleep infinity"]
+
+  fierce:
+    build: ./fierce
+    container_name: fierce
+    volumes:
+      - ./outdir/fierce:/out
+    entrypoint: ["/bin/sh","-c","sleep infinity"]
+
+  shodan:
+    build: ./shodan
+    container_name: shodan
+    volumes:
+      - ./outdir/shodan:/out
+    entrypoint: ["/bin/sh","-c","sleep infinity"]
+
+  cryptohack:
+    build: ./cryptohack
+    container_name: cryptohack
+    volumes:
+      - ./outdir/cryptohack:/out
+    entrypoint: ["/bin/sh","-c","sleep infinity"]
+
+networks:
+  default:
+    external: false
